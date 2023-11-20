@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import ProductoContext from '../contexts/ProductoContext'
 import { useForm } from '../hooks/useForm'
 import './Formulario.scss'
+import DragDrop from './DragDrop'
 
 const formInicial = {
   id: null,
@@ -16,13 +17,20 @@ const formInicial = {
 }
 
 const Formulario = ( { productoAEditar, setProductoAEditar } ) => {
+  const [foto, setFoto] = useState('')
+  const [srcImagen, setSrcImagen] = useState('')
+
   const [form, setForm, handleChange] = useForm(formInicial)
   const { crearProductoContext, actualizarProductoContext } = useContext(ProductoContext)
 
   useEffect(() => {
-
-    productoAEditar ? setForm(productoAEditar) : setForm(formInicial)
-
+    if ( productoAEditar ) {
+      setForm(productoAEditar)
+      setSrcImagen(productoAEditar.foto)
+    } else {
+      setForm(formInicial)
+    }
+    /* productoAEditar ? setForm(productoAEditar) : setForm(formInicial) */
   }, [productoAEditar, setProductoAEditar])
   
   
@@ -31,9 +39,11 @@ const Formulario = ( { productoAEditar, setProductoAEditar } ) => {
     try {
 
       if (form.id === null) {
-        await crearProductoContext(form)
+        const productoNuevoConImagen = {...form, ...foto}
+        await crearProductoContext(productoNuevoConImagen)
       } else {
-        await actualizarProductoContext(form)
+        const productoNuevoConImagen = {...form, ...foto}
+        await actualizarProductoContext(productoNuevoConImagen)
       }
 
       handleReset()
@@ -45,6 +55,8 @@ const Formulario = ( { productoAEditar, setProductoAEditar } ) => {
 
   const handleReset = () => {
     setForm(formInicial)
+    setFoto('')
+    setSrcImagen('')
   }
 
   return (
@@ -117,7 +129,7 @@ const Formulario = ( { productoAEditar, setProductoAEditar } ) => {
             value={form.detalles}
             onChange={handleChange} />
         </div>
-        <div className='alta-form__container foto'>
+        {/* <div className='alta-form__container foto'>
           <label className='alta-form__label' htmlFor="lbl-foto">Foto</label>
           <input 
             className='alta-form__input'
@@ -127,7 +139,9 @@ const Formulario = ( { productoAEditar, setProductoAEditar } ) => {
             placeholder='Ingrese un foto'
             value={form.foto}
             onChange={handleChange} />
-        </div>
+        </div> */}
+        <DragDrop setFoto={setFoto} srcImagen={srcImagen} setSrcImagen={setSrcImagen} />
+        
         <div className='alta-form__container envio'>
           <label className='alta-form__label' htmlFor="lbl-envio">Envío</label>
           <input 
