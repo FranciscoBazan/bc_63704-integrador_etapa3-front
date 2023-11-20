@@ -1,0 +1,104 @@
+@use '../Styles/variables.scss';
+
+.section-cards__header {
+    padding: 1em ;
+    background-color: variables.$cards-background-color;
+    margin-bottom: 1em;
+    border-radius: 10px;
+    color: variables.$cards-color;
+
+    @media (min-width: 1024px) {
+        max-width: 100%;
+    }
+}
+
+.card {
+    text-decoration: none;
+    outline: none;
+    max-width: 300px;
+    overflow: hidden;
+    background-color: variables.$cards-background-color;
+    color: variables.$cards-color;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px rgba(0,0,0, .2), 0 0 3px rgba(0,0,0, .3);
+
+    transition: transform .2s; /* No puede ser all */
+
+    &:hover, /* .card:hover */
+    &:focus {
+        transform: scale(1.03) skew(0);
+        transform-origin: bottom;
+        box-shadow: 0 7px 8px rgba(0,0,0, .05), 0 3px 3px rgba(0,0,0, .01);
+    }
+
+    &__image-container {
+        height: 300px;
+        overflow: hidden;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform .2s;
+    }
+
+    &:hover &__image,
+    &:focus &__image {
+        transform: scale(1.4);
+        transform-origin: center;
+    }
+
+    &__content {
+        padding: 1em;
+    }
+
+    &_heading {
+        font-size: 1.3em;
+        border-bottom: solid 1px variables.$cards-color;
+    }
+
+    &__description {
+        font-size: 1em;
+    }
+
+    &__button {
+        padding: 1em;
+        margin-top: 1em;
+        border-radius: 10px;
+        background-color: variables.$cards-color;
+        color: variables.$cards-background-color;
+        border: none;
+        font-weight: 700;
+        transition: background-color ease-in .2s;
+        cursor: pointer;
+    }
+
+    &__button:hover {
+        background-color: variables.$button4-background-color-hover;
+    }
+
+    @media (min-width: 1024px) {
+        & { /* .card */
+            min-width: 260px;
+        }
+    }
+
+    @media (min-width: 426px) and (max-width: 768px) {
+        & {
+            min-width: 400px;
+            max-width: 500px;
+            height: 200px;
+        }
+
+        &__article { /* .card__article */
+            display: flex;
+        }
+
+        & &__image-container { /* .card .card_image-container */
+            width: 100%;
+            height: 200px;
+        }
+
+    }
+}

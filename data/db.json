@@ -1,0 +1,176 @@
+{
+  "productos": [
+    {
+    "nombre": "Camisa Azul",
+    "foto": "img/camisa-azul.jpg",
+    "detalles": "La perfecta fusión entre estilo atemporal y comodidad inigualable con nuestra camisa clásica azul.",
+    "precio": "15000.00",
+    "stock": "11",
+    "marca": "Jacarandá",
+    "categoria": "Camisas",
+    "envio": true,
+    "id": "2"
+    },
+    {
+    "nombre": "Camisa Violeta",
+    "foto": "img/camisa-violeta.jpg",
+    "detalles": "La perfecta fusión entre estilo atemporal y comodidad inigualable con nuestra camisa clásica violeta.",
+    "precio": "15000.0",
+    "stock": "7",
+    "marca": "Jacarandá",
+    "categoria": "Camisas",
+    "envio": true,
+    "id": "3"
+    },
+    {
+    "nombre": "Campera Bomber",
+    "foto": "img/campera-bomber.jpg",
+    "detalles": "Añade un toque de estilo urbano y actitud desenfadada a tu vestuario con nuestra campera bomber.",
+    "precio": "25000.0",
+    "stock": "3",
+    "marca": "Jacarandá",
+    "categoria": "Camperas",
+    "envio": false,
+    "id": "4"
+    },
+    {
+    "nombre": "Campera de Cuero",
+    "foto": "img/campera-cuero.jpg",
+    "detalles": "Descubre la perfecta combinación entre elegancia atemporal y actitud audaz con nuestra campera de cuero genuino.",
+    "precio": "37500.0",
+    "stock": "2",
+    "marca": "Jacarandá",
+    "categoria": "Camperas",
+    "envio": true,
+    "id": "5"
+    },
+    {
+    "nombre": "Gorra Montaña",
+    "foto": "img/gorra-montañas.jpg",
+    "detalles": "Fabricada con materiales de calidad, esta gorra está diseñada para resistir el uso diario.",
+    "precio": "7000.0",
+    "stock": "5",
+    "marca": "Jacarandá",
+    "categoria": "Headwear",
+    "envio": true,
+    "id": "7"
+    },
+    {
+    "nombre": "Gorros Beanie",
+    "foto": "img/gorros-beanie.jpg",
+    "detalles": "Prepárate para enfrentar los días fríos con estilo y comodidad gracias a nuestros gorros de lana estilo beanie.",
+    "precio": "10000.0",
+    "stock": "2",
+    "marca": "Jacarandá",
+    "categoria": "Headwear",
+    "envio": true,
+    "id": "8"
+    },
+    {
+    "nombre": "Pantalon Jean Azul",
+    "foto": "img/jean-azul.jpg",
+    "detalles": "Nuestros jeans presentan un corte cuidadosamente diseñado que resalta tus mejores características y se adapta a tu forma con elegancia.",
+    "precio": "23400.0",
+    "stock": "5",
+    "marca": "Jacarandá",
+    "categoria": "Pantalones",
+    "envio": false,
+    "id": "9"
+    },
+    {
+    "nombre": "Remera Blanca Lisa",
+    "foto": "img/remera-blanca.jpg",
+    "detalles": "Añade un toque de elegancia sutil y comodidad excepcional a tu guardarropa con nuestra rememera lisa de estilo versátil.",
+    "precio": "6000.0",
+    "stock": "17",
+    "marca": "Jacarandá",
+    "categoria": "Remeras",
+    "envio": true,
+    "id": "11"
+    },
+    {
+    "nombre": "Remera Negra",
+    "foto": "img/remera-negra.jpg",
+    "detalles": "Fabricada con tejidos suaves y transpirables, esta remera tiene un aspecto increíble.",
+    "precio": "6000.0",
+    "stock": "11",
+    "marca": "Jacarandá",
+    "categoria": "Remeras",
+    "envio": true,
+    "id": "12"
+    },
+    {
+    "nombre": "Zapatos Natural",
+    "foto": "img/zapatos.jpg",
+    "detalles": "Descubre la belleza en la simplicidad con nuestros zapatos de color natural.",
+    "precio": "30000.0",
+    "stock": "5",
+    "marca": "Jacarandá",
+    "categoria": "Calzado",
+    "envio": false,
+    "id": "14"
+    },
+    {
+    "nombre": "Sobrecamisa Gris",
+    "foto": "img/sobrecamisa-gris.jpg",
+    "detalles": "Descubre el equilibrio perfecto entre estilo y funcionalidad con nuestra sobrecamisa gris.",
+    "precio": "21000.0",
+    "stock": "5",
+    "marca": "Jacarandá",
+    "categoria": "Abrigos",
+    "envio": true,
+    "id": "15"
+    },
+    {
+    "nombre": "Poncho Tejido",
+    "foto": "img/poncho.jpg",
+    "detalles": "Envuélvete en la belleza artesanal y la comodidad acogedora de nuestro poncho tejido.",
+    "precio": "16700.0",
+    "stock": "1",
+    "marca": "Jacarandá",
+    "categoria": "Abrigos",
+    "envio": false,
+    "id": "16"
+    }
+    ],
+  "carrito": [
+    [
+      {
+        "nombre": "IPhone 15 Pro Max",
+        "foto": "img/apple-iphone-11-pro-max.jpg",
+        "detalles": "Lorem ipsum dolor sit, amet consectetur adipisicing.",
+        "precio": 250.5,
+        "stock": "4444",
+        "marca": "Apple",
+        "categoria": "celulares",
+        "id": 1,
+        "envio": false,
+        "cantidad": 1
+      },
+      {
+        "nombre": "IPhone 12",
+        "foto": "img/apple-iphone-12.jpg",
+        "detalles": "Quasi cupiditate quisquam facere molestiae",
+        "precio": 240.3,
+        "stock": "4",
+        "marca": "Apple",
+        "categoria": "celulares",
+        "id": 2,
+        "envio": true,
+        "cantidad": 3
+      },
+      {
+        "nombre": "Camara Canon",
+        "detalles": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+        "foto": "img/camara-canon.jpg",
+        "precio": 678,
+        "stock": 7,
+        "marca": "Rustic Soft Tuna",
+        "categoria": "Generic",
+        "id": 4,
+        "envio": true,
+        "cantidad": 1
+      }
+    ]
+  ]
+}

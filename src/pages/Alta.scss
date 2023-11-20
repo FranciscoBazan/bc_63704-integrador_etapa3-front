@@ -1,0 +1,10 @@
+@use "../Styles/variables.scss";
+
+.alta-header {
+    padding: .6em ;
+    background-color: variables.$cards-background-color;
+    margin: .5em;
+    border-radius: 10px;
+    color: variables.$cards-color;
+
+}
