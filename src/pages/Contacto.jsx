@@ -1,6 +1,7 @@
 import { faFaceFrown, faFaceSmileBeam } from '@fortawesome/free-regular-svg-icons'
 import './Contacto.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import FormContacto from '../components/FormContacto'
 
 const Contacto = () => {
   return (
@@ -11,29 +12,7 @@ const Contacto = () => {
         <p>Ponte en contacto con nosotros!</p>
       </header>
 
-      <div className="form-container">
-        <form action="#" className="form-container__form">
-          <label htmlFor="motivo" className="form-container__label">Motivo</label>
-          <select name="motivo" id="motivo" className="form-container__select" required>
-            <option value="" className="form-container__option" disabled /* selected */ hidden>- Seleccionar - </option>
-            <option value="" className="form-container__option">Cancelar compra</option>
-            <option value="" className="form-container__option">Cambios y devoluciones</option>
-            <option value="" className="form-container__option">Envío de pedido</option>
-            <option value="" className="form-container__option">Otra información</option>
-          </select>
-
-          <label htmlFor="name" className="form-container__label">Nombre completo</label>
-          <input type="text" id="name" className="form-container__input" required />
-          <label htmlFor="mail" className="form-container__label">Email</label>
-          <input type="email" id="mail" className="form-container__input" required />
-          <label htmlFor="telefono" className="form-container__label">Teléfono</label>
-          <input type="number" id="telefono" className="form-container__input" required />
-          <label htmlFor="comentarios" className="form-container__label">Comentarios</label>
-          <textarea name="comentarios" id="comentarios" cols="30" rows="10" className="form-container__textarea"></textarea>
-
-          <button type="submit" className="form-container__button">Enviar</button>
-        </form>
-      </div>
+      <FormContacto />
 
       <div className="final-form-container">
         <form action="#" className="final-form-container__form">

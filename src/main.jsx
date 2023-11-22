@@ -11,11 +11,13 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { ProductoProvider } from "./contexts/ProductoContext";
 import { CarritoProvider } from "./contexts/CarritoContext";
+import { ContactoProvider } from "./contexts/ContactoContext";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <CarritoProvider>
       <ProductoProvider>
+        <ContactoProvider>
         <BrowserRouter>
 
           <Header />
@@ -32,6 +34,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Footer />
           
         </BrowserRouter>
+        </ContactoProvider>
       </ProductoProvider>
     </CarritoProvider>
 

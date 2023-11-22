@@ -55,6 +55,29 @@ export const post = async (url, dato) => {
     }
 }
 
+export const postCliente = async (url, dato) => {
+    try {
+        const config = {
+        method: 'POST',
+        headers: { 'content-type': 'application/json'},
+        body: JSON.stringify(dato)
+        }
+        
+        const respuesta = await fetch(url, config)
+        if ( !respuesta.ok ) {
+            throw new Error(`Ocurrió un problema ${respuesta.status} ${respuesta.statusText}`)
+        }
+        const datos = await respuesta.text()
+        const clienteCreado = datos ? JSON.parse(datos) : null 
+        return clienteCreado
+        /* const clienteCreado = await respuesta.json()
+        return clienteCreado */
+    } catch (error) {
+        console.error('ERROR POST Cliente', error)
+    }
+    
+}
+
 export const put = async (url, id, dato) => {
     try {
         const config = {
