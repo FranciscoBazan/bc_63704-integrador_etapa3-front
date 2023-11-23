@@ -59,14 +59,17 @@ const DragDrop = ({ setFoto, srcImagen, setSrcImagen }) => {
 
   return (
     <div className='drop-area' onDrop={handleDrop}>
-        <p>
-            Subir imagen al servidor con <b>File Dialog</b> o con <b>drag and drop</b> dentro del área punteada.
-        </p>
+        <div>
+            <p>
+                Subir imagen al servidor con <b>File Dialog</b> o con <b>drag and drop</b> dentro del área.
+            </p>
 
-        <input type="file" id='lbl-foto' accept='image/*' onChange={handleChange}/>
-        <label className='drop-area-button' htmlFor="lbl-foto">
-            File Dialog
-        </label>
+            <input type="file" id='lbl-foto' accept='image/*' onChange={handleChange}/>
+            <label className='drop-area-button' htmlFor="lbl-foto">
+                File Dialog
+            </label>
+        </div>
+        
 
         <div className='drop-area-image'>
             <img src={srcImagen} alt="" />

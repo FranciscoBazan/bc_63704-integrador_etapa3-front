@@ -1,21 +1,22 @@
+@use '../Styles/variables.scss';
+
 .drop-area{
-    border: 2px dashed #ccc;
+    border: 1px solid variables.$form-input;
     border-radius: 20px;
-    width: 300px;
-    margin: 25px 0;
-    padding: 20px;
+    padding: 30px;
+    grid-column: 1 / 6;
 
     & p {
-        margin: 30px;
+        margin-bottom: 15px;
     }
 
     &-button {
         display: inline-block;
         padding: 10px;
-        background: #ccc;
+        background: variables.$form-input;
         cursor: pointer;
         border-radius: 5px;
-        border-radius: 1px solid #ccc;
+        margin-bottom: 10px;
     }
 
     & #lbl-foto {
@@ -24,8 +25,14 @@
 
     &-image img {
         width: 150px;
-        margin-top: 10px;
-        margin-right: 10px;
         vertical-align: middle;
+    }
+
+    @media (min-width: 426px) {
+        display: flex;
+
+        &-image img {
+            margin-left: 10px;
+        }
     }
 }

@@ -22,25 +22,14 @@ table.tabla-alta {
     background-color: variables.$button3-background-color-hover;
   }
 
-  @media (min-width: 650px) and (max-width: 768px) {
+  @media (max-width: 768px) {
     td:last-of-type {
         margin-bottom: 2em;
+        display: flex;
   
         button {
-          grid-column: 1 / 3;
-          width: 20%;
+          width: 10em;
         }
       }
-  }
-
-  @media (max-width: 650px) {
-    td:last-of-type {
-      margin-bottom: 2em;
-
-      button {
-        grid-column: 1 / 3;
-        width: 40%;
-      }
-    }
   }
 }

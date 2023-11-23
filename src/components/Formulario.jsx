@@ -153,10 +153,9 @@ const Formulario = ( { productoAEditar, setProductoAEditar } ) => {
             checked={form.envio}
             onChange={handleChange} />
         </div>
-        <div className="boton">
+        <div className="buttons">
           <button type="submit">Enviar</button>
-        </div>
-        <div className="boton">
+        
           <button type="reset" onClick={handleReset}>Limpiar</button>
         </div>
         
