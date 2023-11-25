@@ -1,7 +1,9 @@
+import { useState } from 'react'
 import { post } from '../utils/http'
 import './DragDrop.scss'
 
 const DragDrop = ({ setFoto, srcImagen, setSrcImagen }) => {
+    const [drag, setDrag] = useState(false)
 
     const arrayEventos = ['dragenter', 'dragleave', 'dragover', 'drop']
 
@@ -57,8 +59,20 @@ const DragDrop = ({ setFoto, srcImagen, setSrcImagen }) => {
         }
     }
 
+    const handleEnter = () => {
+        setDrag(true)
+    }
+
+    const handleOver = () => {
+        setDrag(true)
+    }
+
+    const handleLeave = () => {
+        setDrag(false)
+    }
+
   return (
-    <div className='drop-area' onDrop={handleDrop}>
+    <div className={`drop-area ${drag ? 'enter' : ''}`} onDrop={handleDrop} onDragEnter={handleEnter} onDragLeave={handleLeave} onDragOver={handleOver}>
         <div>
             <p>
                 Subir imagen al servidor con <b>File Dialog</b> o con <b>drag and drop</b> dentro del área.

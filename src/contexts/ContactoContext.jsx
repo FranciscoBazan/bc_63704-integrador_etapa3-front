@@ -3,7 +3,7 @@ import { postCliente } from "../utils/http";
 
 const ContactoContext = createContext()
 
-const url = 'http://localhost:8080/api/clientes/'
+const url = import.meta.env.VITE_URL_CLIENTES
 const ContactoProvider = ( { children } ) => {
     const [clientes, setClientes] = useState([])
 
