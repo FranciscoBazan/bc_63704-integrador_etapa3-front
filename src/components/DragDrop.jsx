@@ -41,6 +41,7 @@ const DragDrop = ({ setFoto, srcImagen, setSrcImagen }) => {
 
         reader.addEventListener('loadend', () => {
             setSrcImagen(reader.result)
+            setDrag(false)
         })
     }
 
