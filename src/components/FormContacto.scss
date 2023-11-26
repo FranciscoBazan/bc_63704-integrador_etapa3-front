@@ -1,12 +1,10 @@
 @use '../Styles/variables.scss';
 
 .form-container {
-    background-color: variables.$searchbar-backgorund-color;
-    color: variables.$cards-color;
     padding: 1em;
+    margin: 1em;
+    border: 10px solid variables.$searchbar-backgorund-color;
     border-radius: 10px;
-    margin: 2em 1em;
-    letter-spacing: .1em;
     min-width: 90%;
 
     &__form {
@@ -15,42 +13,51 @@
     }
 
     &__label {
-        padding: .6em;
+        font-size: 1.2em;
+        font-weight: 700;
+        text-transform: lowercase;
+        text-transform: capitalize;
     }
 
     &__input,
      &__select,
       &__textarea {
-        border: none;
-        outline: none;
-        border: solid 2px white;
         padding: .8em;
+        width: 100%;
+        margin-bottom: 1em;
         border-radius: 10px;
-        background-color: variables.$searchbar-backgorund-color;
-        color: variables.$cards-color;
+        border: solid 1px variables.$form-input;
+        outline: none;
     }
 
     &__textarea {
         height: 5em;
     }
 
+    &__input:focus,
+     &__select:focus,
+      &__textarea:focus {
+        border: solid 0.5px variables.$searchbar-backgorund-color;
+      }
+
     &__button {
-        margin-top: 1em;
-        width: 30%;
-        align-self: center;
         padding: 1em;
+        margin: .6em 0;
         border-radius: 10px;
+        background-color: variables.$searchbar-backgorund-color;
+        color: variables.$searchbar-color;
         border: none;
-        background-color: variables.$button-background-color;
-        color: variables.$cards-color;
-        border: solid 2px variables.$cards-color;
         font-weight: 700;
+        letter-spacing: 1px;
+        transition: background-color ease-in .2s;
+        cursor: pointer;
+        margin-right: 15px;
+        align-self: center;
+        width: 30%;
     }
 
     &__button:hover {
-        background-color: variables.$section-cards-background-color;
-        color: variables.$button-background-color;
-        border: solid 3px variables.$button-background-color;
+        background-color: variables.$button2-background-color-hover;
     }
 
     @media (min-width: 1024px) {

@@ -47,11 +47,11 @@ const FormContacto = () => {
           </select>
 
           <label htmlFor="nombre" className="form-container__label">Nombre completo</label>
-          <input type="text" id="nombre" name='nombre' className="form-container__input" value={form.nombre} onChange={handleChange}/>
+          <input type="text" id="nombre" name='nombre' className="form-container__input" placeholder='Ingrese un nombre' value={form.nombre} onChange={handleChange}/>
           <label htmlFor="mail" className="form-container__label">Email</label>
-          <input type="email" id="mail" className="form-container__input" name='mail' value={form.mail} onChange={handleChange}/>
+          <input type="email" id="mail" className="form-container__input" name='mail' placeholder='Ingrese un mail' value={form.mail} onChange={handleChange}/>
           <label htmlFor="telefono" className="form-container__label">Teléfono</label>
-          <input type="text" id="telefono" className="form-container__input" name='telefono' value={form.telefono} onChange={handleChange}/>
+          <input type="text" id="telefono" className="form-container__input" name='telefono' placeholder='Ingrese un número' value={form.telefono} onChange={handleChange}/>
           <label htmlFor="comentarios" className="form-container__label">Comentarios</label>
           <textarea name="comentarios" id="comentarios" cols="30" rows="10" className="form-container__textarea" value={form.comentarios} onChange={handleChange}></textarea>
 

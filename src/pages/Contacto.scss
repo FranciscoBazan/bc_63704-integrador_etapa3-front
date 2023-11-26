@@ -1,7 +1,6 @@
 @use '../Styles/variables.scss';
 
 .section-contact {
-    background-color: variables.$section-cards-background-color;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -71,6 +70,7 @@
         position: relative;
         transform: translateY(10px);
         transition: transform .4s;
+        cursor: pointer;
     }
 
     &__icono:hover {
@@ -79,19 +79,20 @@
     }
 
     &__submit {
-        padding: 1em 2em;
+        padding: 1em;
+        margin: 0.6em;
         border-radius: 10px;
-        font-weight: 700;
+        background-color: variables.$nosotros-text-background-color;
+        color: variables.$searchbar-color;
         border: none;
-        background-color: variables.$button-background-color;
-        color: variables.$cards-color;
-        box-shadow: 0 2px 5px rgba(0,0,0, .2), 0 0 3px rgba(0,0,0, .3);
+        font-weight: 700;
+        letter-spacing: 1px;
+        transition: background-color ease-in .2s;
+        cursor: pointer;
     }
 
     &__submit:hover {
-        color: variables.$button-background-color;
-        background-color: variables.$cards-color;
-        border: solid 3px variables.$button-background-color;
+        background-color: variables.$button3-background-color-hover;
     }
 
     @media (min-width: 1024px) {
